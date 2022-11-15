@@ -1,0 +1,76 @@
+﻿<nav class="navbar nav-underline navbar-expand-lg d-flex navbar-light shadow-no-hover justify-content-between align-items-center pb-lg-3">
+    <a href="/" class="navbar-brand md-f-size-1-5  ps-2 m-0 mx-lg-5 fw-bold ">
+        David Ghubatyan<span class="text-dark fw-normal"></span> &#8211; <h style="color: #0F94D8">.NET Developer</h>
+    </a>
+
+    <div class="" id="navbarSupportedContent">
+        <ul class="navbar-nav active ">
+            <li class=" ">
+                <div style="width:150px;height:24px">
+                    <a href="@HomePageUri" class="Button button  @(IsPageActive(HomePageUri) ? "active" : string.Empty)">
+                        Home
+                    </a>
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <div style="width:150px;height:24px">
+                    <a href="@AboutPageUri" class="Button button  @(IsPageActive(AboutPageUri) ? "active" : string.Empty)">
+                        About
+                    </a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <div style="width:400px;height:24px">
+                    <a href="@ContactPageUri" class="Button button @(IsPageActive(ContactPageUri) ? "active" : string.Empty)">
+                        Contact
+                    </a>
+                    </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+@code
+{
+    // Public and CamelCase because C# properties are methods.
+    [Inject] public NavigationManager NavigationManager { get; set; }
+
+    private const string HomePageUri = "/";
+    private const string EducationPageUri = "/blog";
+    private const string AboutPageUri = "/about";
+    private const string ContactPageUri = "/contact";
+
+    private bool IsPageActive(string pageToCheckUri)
+    {
+        // Skip(3) to remove https://domainname/
+        string[] currentUriSplitBetweenSlashes = NavigationManager.Uri.Split('/').Skip(3).ToArray();
+
+        if (pageToCheckUri == HomePageUri)
+        {
+            if (currentUriSplitBetweenSlashes.Last().Length == 0)
+            {
+                return true;
+            }
+        }
+        else
+        {
+            string[] pageToCheckUriSplitBetweenSlashes = pageToCheckUri.Split('/').Skip(1).ToArray();
+
+            foreach (string currentUriPart in currentUriSplitBetweenSlashes)
+            {
+                foreach (string pageToCheckUriPart in pageToCheckUriSplitBetweenSlashes)
+                {
+                    if (pageToCheckUriPart == currentUriPart)
+                    {
+                        return true;
+                    }
+                }
+            }
+        }
+
+
+        // If the code gets here pageToCheckUri is not the active page. So return false.
+        return false;
+    }
+}

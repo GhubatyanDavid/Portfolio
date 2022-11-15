@@ -1,0 +1,12 @@
+E:\Github\C# - Exercises\Portfoilo\Shared\bin\Debug\net6.0\Shared.deps.json
+E:\Github\C# - Exercises\Portfoilo\Shared\bin\Debug\net6.0\Shared.dll
+E:\Github\C# - Exercises\Portfoilo\Shared\bin\Debug\net6.0\Shared.pdb
+E:\Github\C# - Exercises\Portfoilo\Shared\obj\Debug\net6.0\Shared.csproj.AssemblyReference.cache
+E:\Github\C# - Exercises\Portfoilo\Shared\obj\Debug\net6.0\Shared.GeneratedMSBuildEditorConfig.editorconfig
+E:\Github\C# - Exercises\Portfoilo\Shared\obj\Debug\net6.0\Shared.AssemblyInfoInputs.cache
+E:\Github\C# - Exercises\Portfoilo\Shared\obj\Debug\net6.0\Shared.AssemblyInfo.cs
+E:\Github\C# - Exercises\Portfoilo\Shared\obj\Debug\net6.0\Shared.csproj.CoreCompileInputs.cache
+E:\Github\C# - Exercises\Portfoilo\Shared\obj\Debug\net6.0\Shared.dll
+E:\Github\C# - Exercises\Portfoilo\Shared\obj\Debug\net6.0\refint\Shared.dll
+E:\Github\C# - Exercises\Portfoilo\Shared\obj\Debug\net6.0\Shared.pdb
+E:\Github\C# - Exercises\Portfoilo\Shared\obj\Debug\net6.0\ref\Shared.dll

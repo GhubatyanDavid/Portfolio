@@ -1,0 +1,65 @@
+﻿@page "/contact"
+@using System.Net.Mail;
+@using Microsoft.AspNetCore.Components.Web
+
+<Client.Components.Public.Shared.Navbar />
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact us</title>
+        <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+</head>
+<body>
+    <div class="container">
+        <div class="contact-box" style="position: relative; left: 325px; top: 8px;">
+            <div class="left"></div>
+            <div class="right">
+                <h2>Contact Us</h2>
+                <label asp-for="mails.From"><input type="text" asp-for="" class="field" placeholder="Your Name"></label>
+                <label asp-for="mails.To"><input type="text" asp-for="" class="field" placeholder="Your Email"></label>
+                <label asp-for="mails.Subject"><input type="text" asp-for="" class="field" placeholder="Phone"></label>
+                <label asp-for="mails.Body"><textarea placeholder="Message" class="field"></textarea></label>
+                    <button class="btn btn-primary" @onclick="SendMail">Send</button>
+                <span style="font-weight:bold;font-size:28px;color:#c00;">@Message </span>
+</div>
+        </div>
+    </div>
+</body>
+</html>
+
+<Client.Components.Public.Shared.Footer />
+
+
+@code
+{
+    private string Message { get; set; } = "";
+    private void SendMail()
+    {
+        try
+        {
+            using (MailMessage mail = new MailMessage())
+            {
+                mail.From = new MailAddress("uxarkoxi@gmail.com");
+                mail.To.Add("ghubatyandavid@gmail.com");
+                mail.Subject = "Uxarkumem Test Mail";
+                mail.Body = "<h1>Sa Maili Bodyn E</h1>";
+                mail.IsBodyHtml = true;
+                using(SmtpClient smtp = new SmtpClient("smtp.gmail.com",587))
+                {
+                    smtp.Credentials = new System.Net.NetworkCredential("uxarkoxi@gmail.com", "uxarkoxiparol");
+                    smtp.EnableSsl = true;
+                    smtp.Send(mail);
+                    Message = "Mail Sent";
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            Message = ex.Message;
+            throw;
+        }
+    }
+
+}
