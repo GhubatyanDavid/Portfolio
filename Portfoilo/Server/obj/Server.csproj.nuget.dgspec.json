@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Github\\Portfolio\\Portfoilo\\Server\\Server.csproj": {}
+    "C:\\Users\\suren.vanyan\\Source\\Repos\\Portfolio\\Portfoilo\\Server\\Server.csproj": {}
   },
   "projects": {
-    "E:\\Github\\Portfolio\\Portfoilo\\Server\\Server.csproj": {
+    "C:\\Users\\suren.vanyan\\Source\\Repos\\Portfolio\\Portfoilo\\Server\\Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Github\\Portfolio\\Portfoilo\\Server\\Server.csproj",
+        "projectUniqueName": "C:\\Users\\suren.vanyan\\Source\\Repos\\Portfolio\\Portfoilo\\Server\\Server.csproj",
         "projectName": "Server",
-        "projectPath": "E:\\Github\\Portfolio\\Portfoilo\\Server\\Server.csproj",
-        "packagesPath": "C:\\Users\\HighEnd\\.nuget\\packages\\",
-        "outputPath": "E:\\Github\\Portfolio\\Portfoilo\\Server\\obj\\",
+        "projectPath": "C:\\Users\\suren.vanyan\\Source\\Repos\\Portfolio\\Portfoilo\\Server\\Server.csproj",
+        "packagesPath": "C:\\Users\\suren.vanyan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\suren.vanyan\\Source\\Repos\\Portfolio\\Portfoilo\\Server\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\HighEnd\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\suren.vanyan\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +25,9 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://cargoodev.pkgs.visualstudio.com/Cargoo_V2/_packaging/Cargoo_Utils/nuget/v3/index.json": {},
+          "https://cargoodev.pkgs.visualstudio.com/Cargoo_V2/_packaging/Cargoo_WorkflowRules/nuget/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
