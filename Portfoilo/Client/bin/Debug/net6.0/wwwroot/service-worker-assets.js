@@ -145,12 +145,24 @@
       "url": "_framework\/Microsoft.JSInterop.WebAssembly.dll"
     },
     {
+      "hash": "sha256-cs8pHUurDt0IqbB8YXPh560au3q3J\/1wRL9jBddRVmE=",
+      "url": "_framework\/Newtonsoft.Json.dll"
+    },
+    {
       "hash": "sha256-iZ82KufB7VL4vikYPHOk4epNcuQzBa0wqUJtaeI6ecg=",
       "url": "_framework\/PdfSharp.Charting.dll"
     },
     {
       "hash": "sha256-L6CJPGoajmQ0LmXlRk+tQXN2vSzJhOU1dfWCmwfmoGc=",
       "url": "_framework\/PdfSharp.dll"
+    },
+    {
+      "hash": "sha256-U071fierVbUHqS+pvHFhFgL6fbv1bCQl47hxLnh9vtM=",
+      "url": "_framework\/SendGrid.dll"
+    },
+    {
+      "hash": "sha256-mVjnbJl35Ezfmn4mvXp3y6RG9DaPSU9DcO5NvQsXSmU=",
+      "url": "_framework\/StarkbankEcdsa.dll"
     },
     {
       "hash": "sha256-6+E55JXedimdw1c1bDtVg4K7XuWjVWVTifH8QpfzXSY=",
@@ -857,11 +869,11 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-WkZg9j03kbvDCWv8ahY8N3mW\/2StmQy0AmgH+6G\/Ehk=",
+      "hash": "sha256-zsftXpX2L0xK+YyslxJT5fKY5TXnRXR\/db328\/vtbu0=",
       "url": "_framework\/Client.dll"
     },
     {
-      "hash": "sha256-ROjEralRktymbgTVP6YMmR0uzbPat2N0eCbNopM0\/q8=",
+      "hash": "sha256-RxQL4ccH5QPzq95XYgYHR3lklhuOMFLQdBYOdipcuTY=",
       "url": "_framework\/Client.pdb"
     },
     {
@@ -869,9 +881,9 @@
       "url": "_framework\/blazor.webassembly.js"
     },
     {
-      "hash": "sha256-TCrEaJepxzaJExjveoW\/hRPKrVkrlw\/6IQJfPWJvfY0=",
+      "hash": "sha256-8z2L7GpALQx9virCH+h1gaSQZLsWA1mok8aVgMNRUSY=",
       "url": "_framework\/blazor.boot.json"
     }
   ],
-  "version": "Pq5t5XwE"
+  "version": "dx6FjyTx"
 };

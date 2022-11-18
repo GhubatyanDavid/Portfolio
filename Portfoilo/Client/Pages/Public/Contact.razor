@@ -1,6 +1,9 @@
 ﻿@page "/contact"
-@using System.Net.Mail;
-@using Microsoft.AspNetCore.Components.Web
+@using System.Threading.Tasks;
+@using SendGrid;
+@using SendGrid.Helpers.Mail;
+@using System.ComponentModel.DataAnnotations;
+
 
 <Client.Components.Public.Shared.Navbar />
 
@@ -17,13 +20,16 @@
             <div class="left"></div>
             <div class="right">
                 <h2>Contact Us</h2>
-                <label asp-for="mails.From"><input type="text" asp-for="" class="field" placeholder="Your Name"></label>
-                <label asp-for="mails.To"><input type="text" asp-for="" class="field" placeholder="Your Email"></label>
-                <label asp-for="mails.Subject"><input type="text" asp-for="" class="field" placeholder="Phone"></label>
-                <label asp-for="mails.Body"><textarea placeholder="Message" class="field"></textarea></label>
-                    <button class="btn btn-primary" @onclick="SendMail">Send</button>
-                <span style="font-weight:bold;font-size:28px;color:#c00;">@Message </span>
-</div>
+                <EditForm Model="@newEmail" OnValidSubmit="@ExecuteEmail">
+                    <DataAnnotationsValidator />
+                    <ValidationSummary />
+                    <InputText id="Name" placeholder="Your Name" @bind-Value="newEmail.Name" :null /><br /><br />
+                    <InputText id="Email" placeholder="Your Email" @bind-Value="newEmail.Email" :null /><br /><br />
+                    <InputText id="Subject" placeholder="Subject" @bind-Value="newEmail.Subject" :null /><br /><br />
+                    <InputText id="Message" placeholder="Message" @bind-Value="newEmail.Message" :null /><br /><br />
+                    <button type="submit" class="btn btn-primary">Send Email</button>
+                </EditForm>
+            </div>
         </div>
     </div>
 </body>
@@ -34,32 +40,33 @@
 
 @code
 {
-    private string Message { get; set; } = "";
-    private void SendMail()
+    public class EmailInPage
     {
-        try
-        {
-            using (MailMessage mail = new MailMessage())
-            {
-                mail.From = new MailAddress("uxarkoxi@gmail.com");
-                mail.To.Add("ghubatyandavid@gmail.com");
-                mail.Subject = "Uxarkumem Test Mail";
-                mail.Body = "<h1>Sa Maili Bodyn E</h1>";
-                mail.IsBodyHtml = true;
-                using(SmtpClient smtp = new SmtpClient("smtp.gmail.com",587))
-                {
-                    smtp.Credentials = new System.Net.NetworkCredential("uxarkoxi@gmail.com", "uxarkoxiparol");
-                    smtp.EnableSsl = true;
-                    smtp.Send(mail);
-                    Message = "Mail Sent";
-                }
-            }
-        }
-        catch (Exception ex)
-        {
-            Message = ex.Message;
-            throw;
-        }
+        [Required]
+        public string Name { get; set; }
+
+        [EmailAddress]
+        public string Email { get; set; }
+        public string Subject { get; set; }
+        public string Message { get; set; }
     }
+    public EmailInPage newEmail = new EmailInPage();
+    public async Task ExecuteEmail()
+    {
+        var apiKey = Environment.GetEnvironmentVariable("smtp.sendgrid.net");
+        //   var apiKey = ("NotMyRealKeyRREJLFJL.KJG.LKJ");
+        var client = new SendGridClient(apiKey);
+        var from = new EmailAddress("myemail@myauthenticatedSGaccount.com", "My SendGrid Authenticated Email");
+        string subject = newEmail.Subject;
+        var to = new EmailAddress(newEmail.Email);
+        var plainTextContent = newEmail.Message;  
+        var htmlContent = "<strong>" + plainTextContent + " in html </strong>";
+        var msg = MailHelper.CreateSingleEmail(from, to, subject, plainTextContent, htmlContent);
+        var response = await client.SendEmailAsync(msg);
+        newEmail = new EmailInPage();
+
+    }
+
+}
 
 }
