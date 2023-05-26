@@ -1979,19 +1979,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\HighEnd\\.nuget\\packages\\": {}
+    "C:\\Users\\Mega-PC\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Github\\Portfolio\\Portfoilo\\Client\\Client.csproj",
+      "projectUniqueName": "D:\\Github\\Portfolio\\Portfoilo\\Client\\Client.csproj",
       "projectName": "Client",
-      "projectPath": "E:\\Github\\Portfolio\\Portfoilo\\Client\\Client.csproj",
-      "packagesPath": "C:\\Users\\HighEnd\\.nuget\\packages\\",
-      "outputPath": "E:\\Github\\Portfolio\\Portfoilo\\Client\\obj\\",
+      "projectPath": "D:\\Github\\Portfolio\\Portfoilo\\Client\\Client.csproj",
+      "packagesPath": "C:\\Users\\Mega-PC\\.nuget\\packages\\",
+      "outputPath": "D:\\Github\\Portfolio\\Portfoilo\\Client\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\HighEnd\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Mega-PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2049,7 +2049,7 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
-            "version": "[6.0.10, 6.0.10]"
+            "version": "[6.0.16, 6.0.16]"
           }
         ],
         "frameworkReferences": {
@@ -2057,7 +2057,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {
@@ -2067,12 +2067,6 @@
     }
   },
   "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file E:\\Github\\Portfolio\\Portfoilo\\Client\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    },
     {
       "code": "NU1701",
       "level": "Warning",

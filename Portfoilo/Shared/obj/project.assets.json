@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\HighEnd\\.nuget\\packages\\": {}
+    "C:\\Users\\Mega-PC\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Github\\Portfolio\\Portfoilo\\Shared\\Shared.csproj",
+      "projectUniqueName": "D:\\Github\\Portfolio\\Portfoilo\\Shared\\Shared.csproj",
       "projectName": "Shared",
-      "projectPath": "E:\\Github\\Portfolio\\Portfoilo\\Shared\\Shared.csproj",
-      "packagesPath": "C:\\Users\\HighEnd\\.nuget\\packages\\",
-      "outputPath": "E:\\Github\\Portfolio\\Portfoilo\\Shared\\obj\\",
+      "projectPath": "D:\\Github\\Portfolio\\Portfoilo\\Shared\\Shared.csproj",
+      "packagesPath": "C:\\Users\\Mega-PC\\.nuget\\packages\\",
+      "outputPath": "D:\\Github\\Portfolio\\Portfoilo\\Shared\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\HighEnd\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Mega-PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -61,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }

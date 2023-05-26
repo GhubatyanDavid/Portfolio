@@ -1,233 +1,95 @@
-﻿svg text.blink {
-    animation: blink 2s ease-out;
-}
-
-body {
-    text-align: center;
-    background-color: #000000;
-    color: #ffffff;
-    position: relative;
-}
-
-#tagi {
-    width: 70%;
-    margin: 250px auto;
-}
-
-@keyframes blink {
-    0% {
-        text-shadow: 0 0 20px rgba(226, 25, 45, 0);
-    }
-
-    20% {
-        fill: rgba(226, 25, 45, 1);
-        text-shadow: -5px -5px 20px rgba(226, 25, 45, 0.8), 5px -5px 20px rgba(226, 25, 45, 0.8), 5px 5px 20px rgba(226, 25, 45, 0.8), -5px 5px 20px rgba(226, 25, 45, 0.8);
-        
-    }
-
-    30% {
-        fill: rgba(226, 25, 45, 1);
-    }
-
-    100% {
-        text-shadow: 0 0 20px rgba(226, 25, 45, 0);
-    }
-}
-
-.left {
-    left: 180px;
-}
-
-.st0 {
-    font-size: 68px;
-}
-
-.st1 {
-    font-size: 27px;
-}
-
-.st2 {
-    font-size: 82px;
-}
-
-.st3 {
-    font-size: 41px;
-}
-
-.st4 {
-    font-size: 41px;
-}
-
-.st5 {
-    fill: #808080;
-}
-
-.st6 {
-    font-size: 24px;
-}
-
-.st7 {
-    font-size: 24px;
-}
-
-.st8 {
-    font-size: 62px;
-}
-
-.st9 {
-    font-size: 86px;
-}
-
-.st10 {
-    font-size: 18px;
-}
-
-.st11 {
-    font-size: 18px;
-}
-
-.st12 {
-    font-size: 25px;
-}
-
-.st13 {
-    font-size: 25px;
-}
-
-.st14 {
-    font-size: 25px;
-}
-
-.st15 {
-    font-size: 32px;
-}
-
-.st16 {
-    font-size: 32px;
-}
-
-.st17 {
-    font-family: 'Open Sans';
-    font-weight: 600;
-    fill: #a0a0a0;
-}
-
-.st18 {
-    font-size: 22px;
-}
-
-.st19 {
-    font-size: 22px;
-}
-
-.st20 {
-    font-size: 36px;
-}
-
-.st21 {
-    font-size: 19px;
-}
-
-.st22 {
-    font-size: 51px;
-}
-
-.st23 {
-    font-size: 26px;
-}
-
-.st24 {
-    font-size: 33px;
-}
-
-.st25 {
-    font-size: 20px;
-}
-
-.st26 {
-    font-size: 23px;
-}
-
-.st27 {
-    font-size: 23px;
-}
-
-.st28 {
-    font-family: 'Open Sans';
-}
-
-.st29 {
-    font-size: 54px;
-}
-
-.st30 {
-    font-size: 20px;
-}
-
-.st31 {
-    font-size: 37px;
-}
-
-
-
-
-* {
+﻿* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    height: 100vh;
-    overflow: hidden;
-    background: linear-gradient(45deg, #061de3, #e306ca);
-    font-family: Helvetica, sans-serif;
-    color: rgb(211, 211, 211);
+    min-height: 100vh;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    background-color: #f1f1f1;
 }
 
-.container {
-    width: 350px;
-    height: 500px;
-    perspective: 800px;
+.about {
+    background: url(khan.jpg) no-repeat left;
+    background-size: 55%;
+    background-color: #fdfdfd;
+    overflow: hidden;
+    padding: 100px 0;
 }
 
-    .container:hover > .card {
-        cursor: pointer;
-        transform: rotateY(180deg);
+.inner-section {
+    width: 55%;
+    float: right;
+    background-color: #d39393;
+    padding: 140px;
+    box-shadow: 13px 12px 8px rgba(0,0,0,0.3);
+}
+
+    .inner-section h1 {
+        margin-bottom: 30px;
+        font-size: 30px;
+        font-weight: 900;
     }
 
-.card {
-    height: 100%;
-    width: 100%;
-    position: relative;
-    transition: transform 1500ms;
-    transform-style: preserve-3d;
+.text {
+    font-size: 13px;
+    color: #545454;
+    line-height: 30px;
+    text-align: justify;
+    margin-bottom: 40px;
 }
 
-.front,
-.back {
-    height: 100%;
-    width: 100%;
-    border-radius: 2rem;
-    box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
-    position: absolute;
-    backface-visibility: hidden;
+.skills button {
+    font-size: 22px;
+    text-align: center;
+    letter-spacing: 2px;
+    border: none;
+    border-radius: 20px;
+    padding: 8px;
+    width: 200px;
+    background-color: #00999c;
+    color: white;
+    cursor: pointer;
 }
 
-.front {
-    background-image: url(https://source.unsplash.com/random/350x500);
-    
+    .skills button:hover {
+        transition: 1s;
+        background-color: #ecf5f5;
+        color: #00999c;
+    }
+
+@media screen and (max-width:1200px) {
+    .inner-section {
+        padding: 80px;
+    }
 }
 
-.back {
-    background-color: #3a3a3a;
-    transform: rotateY(180deg);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 5rem;
+@media screen and (max-width:1000px) {
+    .about {
+        background-size: 100%;
+        padding: 100px 40px;
+    }
+
+    .inner-section {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .about {
+        padding: 0;
+    }
+
+    .inner-section {
+        padding: 60px;
+    }
+
+    .skills button {
+        font-size: 19px;
+        padding: 5px;
+        width: 160px;
+    }
 }
